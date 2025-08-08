@@ -1,0 +1,71 @@
+# Twitter Analyzer Configuration
+
+# OpenAI API Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4o-mini
+OPENAI_MAX_TOKENS=500
+OPENAI_TEMPERATURE=0.7
+
+# Database Configuration
+DATABASE_URL=postgresql://user:password@localhost/twitter_analyzer
+DATABASE_POOL_SIZE=10
+DATABASE_MAX_OVERFLOW=20
+
+# CORS Configuration
+CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000
+CORS_ALLOW_CREDENTIALS=true
+
+# Rate Limiting
+RATE_LIMIT=100/hour
+RATE_LIMIT_WINDOW=3600
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FORMAT=json
+LOG_FILE=logs/app.log
+
+# Twitter Scraping Configuration
+TWITTER_USER_AGENT=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+TWITTER_TIMEOUT=30
+TWITTER_RETRY_ATTEMPTS=3
+
+# Image Analysis Configuration
+IMAGE_MAX_SIZE=10485760  # 10MB
+IMAGE_SUPPORTED_FORMATS=jpg,jpeg,png,gif,webp
+IMAGE_ANALYSIS_TIMEOUT=15
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=8000
+DEBUG=false
+WORKERS=4
+
+# Security Configuration
+SECRET_KEY=your_secret_key_here_change_in_production
+JWT_SECRET_KEY=your_jwt_secret_key_here
+JWT_ALGORITHM=HS256
+JWT_EXPIRATION=3600
+
+# Monitoring Configuration
+ENABLE_METRICS=true
+METRICS_PORT=9090
+HEALTH_CHECK_INTERVAL=30
+
+# Cache Configuration
+REDIS_URL=redis://localhost:6379/0
+CACHE_TTL=3600
+CACHE_MAX_SIZE=1000
+
+# External Services
+SENTRY_DSN=your_sentry_dsn_here
+GOOGLE_ANALYTICS_ID=your_ga_id_here
+
+# Development Configuration
+ENVIRONMENT=development
+ENABLE_DEBUG_TOOLBAR=false
+ENABLE_SWAGGER_UI=true
+
+# Production Configuration
+# ENVIRONMENT=production
+# ENABLE_DEBUG_TOOLBAR=false
+# ENABLE_SWAGGER_UI=false
