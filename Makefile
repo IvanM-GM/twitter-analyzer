@@ -1,4 +1,5 @@
 # Twitter Analyzer Makefile
+SHELL := /bin/bash
 
 .PHONY: help install test run clean docker-build docker-run
 
@@ -35,8 +36,9 @@ install: install-backend install-frontend
 
 install-backend:
 	@echo "Installing backend dependencies..."
-	cd backend && python -m venv venv
-	cd backend && source venv/bin/activate && pip install -r requirements.txt
+	cd backend && python -m venv venv && \
+	source venv/bin/activate && \
+	pip install -r requirements.txt
 
 install-frontend:
 	@echo "Installing frontend dependencies..."
